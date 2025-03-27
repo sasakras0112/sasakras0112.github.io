@@ -255,13 +255,13 @@
                     
                     <div class="waitlist-form">
                         <h3>Accelerate Your Cancer Research</h3>
-                        <form id="waitlistForm">
+                        <form id="waitlistForm" action="https://formspree.io/f/mkgozkrn" method="POST">
                             <div class="form-group">
-                                <input type="email" placeholder="Your Email Address" required>
+                                <input type="email" name="email" placeholder="Your Email Address" required>
                                 <button type="submit">Join Waitlist</button>
                             </div>
                             <div class="form-check">
-                                <input type="checkbox" id="research" required>
+                                <input type="checkbox" id="research" name="is_researcher" required>
                                 <label for="research">I am a researcher, clinician, or affiliated with a scientific institution</label>
                             </div>
                         </form>
@@ -278,10 +278,7 @@
     </footer>
 
     <script>
-        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thanks for joining our waitlist! We\'ll be in touch soon.');
-        });
+        // No JavaScript form handler needed as FormSubmit handles the submission
     </script>
 </body>
 </html>
